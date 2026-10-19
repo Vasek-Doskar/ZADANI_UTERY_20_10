@@ -1,5 +1,12 @@
 # Zadání projektu (Skupina A): Kalkulačka spotřeby a nákladů na palivo
 
+### ⚠️ Pravidla a omezení pro vypracování
+* **Povoleno:** Můžete používat své vlastní poznámky, sešity nebo dříve vytvořené příklady.
+* **Zákaz používání AI:** Je **přísně zakázáno** používat generativní umělou inteligenci (ChatGPT, Copilot, Claude apod.) pro psaní C# kódu, logiky rozhraní nebo Unit Testů.
+* **Výjimka pro AI:** Umělou inteligenci je povoleno použít **výhradně pro generování a úpravu XAML kódu** (designu uživatelského rozhraní).
+
+---
+
 ### 1. Cíl projektu
 
 Vytvořte desktopovou aplikaci ve **WPF** (s využitím code-behind, rozhraní a servisní třídy) a příslušné **Unit Testy**. Aplikace slouží k výpočtu dojezdu vozu se spalovacím motorem, spotřeby paliva na trasu a celkových nákladů na cestu.
@@ -52,7 +59,7 @@ $$
 
 ### 4. Rozhraní (`IFuelCalculatorService`) a Servisní třída
 
-Nejprve si stáhněte nebo vytvořte rozhraní `IFuelCalculatorService`:
+Nejprve vytvořte rozhraní `IFuelCalculatorService`:
 
 ```csharp
 public interface IFuelCalculatorService
@@ -66,15 +73,18 @@ public interface IFuelCalculatorService
 Následně vytvořte třídu `FuelCalculatorService`, která toto rozhraní implementuje.
 
 **Požadavek na ošetření chyb v logice:**
-Všechny metody musí kontrolovat vstupní parametry. Pokud je jakýkoliv vstup **záporný** nebo je spotřeba **$0$** (která by způsobila dělení nulou u dojezdu), metoda vyhodí výjimku `ArgumentException` (např. `throw new ArgumentException("Hodnota musí být větší než 0.");`).
+Všechny metody musí kontrolovat vstupní parametry. Pokud je jakýkoliv vstup **záporný** nebo je spotřeba $0$ (která by způsobila dělení nulou u dojezdu), metoda vyhodí výjimku `ArgumentException` (např. `throw new ArgumentException("Hodnota musí být větší než 0.");`).
 
 ### 5. Požadavky na Unit Testy
 
 Vytvořte testovací projekt (např. MSTest / xUnit) a otestujte servisní třídu:
 
 **Kladné testy (platné vstupy):**
+
 1. **Test dojezdu:** Vstup: Nádrž = $50\text{ l}$, Spotřeba = $5\text{ l/100km}$ $\rightarrow$ Očekávaný výsledek: $1000\text{ km}$.
+
 2. **Test spotřebovaného paliva:** Vstup: Vzdálenost = $400\text{ km}$, Spotřeba = $6\text{ l/100km}$ $\rightarrow$ Očekávaný výsledek: $24\text{ l}$.
+
 3. **Test ceny cesty:** Vstup: Palivo = $24\text{ l}$, Cena za litr = $40\text{ Kč}$ $\rightarrow$ Očekávaný výsledek: $960\text{ Kč}$.
 
 **Záporné testy (chybové stavy):**
@@ -83,6 +93,13 @@ Vytvořte testovací projekt (např. MSTest / xUnit) a otestujte servisní tří
 ---
 
 # Zadání projektu (Skupina B): Bankovní kalkulačka spořicího účtu
+
+### ⚠️ Pravidla a omezení pro vypracování
+* **Povoleno:** Můžete používat své vlastní poznámky, sešity nebo dříve vytvořené příklady.
+* **Zákaz používání AI:** Je **přísně zakázáno** používat generativní umělou inteligenci (ChatGPT, Copilot, Claude apod.) pro psaní C# kódu, logiky rozhraní nebo Unit Testů.
+* **Výjimka pro AI:** Umělou inteligenci je povoleno použít **výhradně pro generování a úpravu XAML kódu** (designu uživatelského rozhraní).
+
+---
 
 ### 1. Cíl projektu
 
@@ -136,7 +153,7 @@ $$
 
 ### 4. Rozhraní (`ISavingsCalculatorService`) a Servisní třída
 
-Nejprve si stáhněte nebo vytvořte rozhraní `ISavingsCalculatorService`:
+Nejprve vytvořte rozhraní `ISavingsCalculatorService`:
 
 ```csharp
 public interface ISavingsCalculatorService
@@ -157,8 +174,11 @@ Všechny metody musí kontrolovat vstupní parametry. Pokud je vklad, doba spoř
 Vytvořte testovací projekt (např. MSTest / xUnit) a otestujte servisní třídu:
 
 **Kladné testy (platné vstupy):**
+
 1. **Test hrubého úroku:** Vstup: Vklad = $100000\text{ Kč}$, Sazba = $5\%$, Doba = $2\text{ roky}$ $\rightarrow$ Očekávaný výsledek: $10000\text{ Kč}$.
+
 2. **Test čistého úroku:** Vstup: Hrubý úrok = $10000\text{ Kč}$, Daň = $15\%$ $\rightarrow$ Očekávaný výsledek: $8500\text{ Kč}$.
+
 3. **Test celkové částky:** Vstup: Vklad = $100000\text{ Kč}$, Čistý úrok = $8500\text{ Kč}$ $\rightarrow$ Očekávaný výsledek: $108500\text{ Kč}$.
 
 **Záporné testy (chybové stavy):**
