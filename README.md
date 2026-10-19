@@ -70,6 +70,14 @@ Vytvořte testovací projekt (např. MSTest / xUnit) a otestujte servisní tří
 2. **Test spotřebovaného paliva:** Vstup: Vzdálenost = $400\text{ km}$, Spotřeba = $6\text{ l/100km}$ $\rightarrow$ Očekávaný výsledek: $24\text{ l}$.
 3. **Test ceny cesty:** Vstup: Palivo = $24\text{ l}$, Cena za litr = $40\text{ Kč}$ $\rightarrow$ Očekávaný výsledek: $960\text{ Kč}$.
 
+
+
+### 6. Odevzdání
+<span style="color: red;"> Projekt WPF spolu s Testovým projektem zabalte do archivu ZIP, který přejmenuje podle svého přijmení. Archiv mi následně pošlete zase do chatu v Teams</span>
+
+S pozdravem
+jistě **milovaný** pan třídní.😉
+
 ---
 
 # Zadání projektu (Skupina B): Bankovní kalkulačka spořicího účtu
@@ -143,3 +151,10 @@ Vytvořte testovací projekt (např. MSTest / xUnit) a otestujte servisní tří
 1. **Test hrubého úroku:** Vstup: Vklad = $100000\text{ Kč}$, Sazba = $5\%$, Doba = $2\text{ roky}$ $\rightarrow$ Očekávaný výsledek: $10000\text{ Kč}$.
 2. **Test čistého úroku:** Vstup: Hrubý úrok = $10000\text{ Kč}$, Daň = $15\%$ $\rightarrow$ Očekávaný výsledek: $8500\text{ Kč}$.
 3. **Test celkové částky:** Vstup: Vklad = $100000\text{ Kč}$, Čistý úrok = $8500\text{ Kč}$ $\rightarrow$ Očekávaný výsledek: $108500\text{ Kč}$.
+   
+
+### 6. Odevzdání
+<span style="color: red;"> Projekt WPF spolu s Testovým projektem zabalte do archivu ZIP, který přejmenuje podle svého přijmení. Archiv mi následně pošlete zase do chatu v Teams</span>
+
+S pozdravem
+jistě **milovaný** pan třídní.😉
