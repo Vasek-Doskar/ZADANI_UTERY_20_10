@@ -52,7 +52,7 @@ $$
 
 ### 4. Rozhraní (`IFuelCalculatorService`) a Servisní třída
 
-Nejprve vytvořte rozhraní `IFuelCalculatorService`:
+Nejprve si stáhněte nebo vytvořte rozhraní `IFuelCalculatorService`:
 
 ```csharp
 public interface IFuelCalculatorService
@@ -136,7 +136,7 @@ $$
 
 ### 4. Rozhraní (`ISavingsCalculatorService`) a Servisní třída
 
-Nejprve vytvořte rozhraní `ISavingsCalculatorService`:
+Nejprve si stáhněte nebo vytvořte rozhraní `ISavingsCalculatorService`:
 
 ```csharp
 public interface ISavingsCalculatorService
